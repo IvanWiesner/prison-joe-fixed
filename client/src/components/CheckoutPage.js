@@ -1,6 +1,6 @@
 import React from "react"
 
-function MerchCard() {
+function CheckoutPage() {
     return (
       <div className="App">
         
@@ -8,4 +8,4 @@ function MerchCard() {
     );
   }
   
-  export default MerchCard;
+  export default CheckoutPage;
