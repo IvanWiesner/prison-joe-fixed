@@ -35,8 +35,8 @@ useEffect(() => {
           <h1 className="navbar-title">Prison Joe</h1>
           <nav className="navbar-bar">
             <Link to="/">Home</Link> |
-            <Link to="/workpage"> Work Info </Link> |
-            <Link to="/merchpage"> Merch </Link>
+            <Link to="/work"> Work Info </Link> |
+            <Link to="/merch"> Merch </Link>
           </nav>
         </div>
 
