@@ -23,7 +23,7 @@ function App() {
 }
 
 useEffect(() => {
-  fetch("http://localhost:3000/merches")
+  fetch("https://prison-joe.herokuapp.com/merches")
     .then((resp) => resp.json())
     .then((data) => setMerch(data))
 }, []);
