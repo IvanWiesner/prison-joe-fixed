@@ -4,6 +4,11 @@ class UsersController < ApplicationController
     
     # skip_before_action :authorize, only: [:create]
     
+        def index 
+            user = User.all
+            render json: user
+        end
+
         def show
             user = User.find(params[:id])
             render json: user
@@ -15,17 +20,17 @@ class UsersController < ApplicationController
         end
     
         def login 
-            user = User.find_by(username:user_params[:username])
+            user = User.find_by(email:user_params[:email])
             if (user && user.authenticate(user_params[:password]))
                 render json: user
             else
                 render json: {error: ['incorrect loging/password info']}
             end
         end
-    
+        
         private 
         def user_params 
-            params.permit(:username, :password)
+            params.permit(:email, :password)
         end
     
         def render_not_found_response

@@ -3,7 +3,7 @@ import React from 'react';
 import { useHistory } from "react-router-dom"
 
 function LoginPage({setLogin}){
-    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loggedIn, setLoggedIn] = useState('')
     const [errors, setErrors] = useState ('')
@@ -12,7 +12,7 @@ function LoginPage({setLogin}){
     function onSubmit(e){
         e.preventDefault()
         const login = {
-            username,
+            email: email,
             password
         }
         // let API_PATH 
@@ -38,8 +38,8 @@ function LoginPage({setLogin}){
         <div>
             <form onSubmit={onSubmit}>
             <label>
-                Username
-                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                Email
+                <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
             </label>
             <label>
                 Password
