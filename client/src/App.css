@@ -12,7 +12,30 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.logo {
+  height: 8vh;
+  width: 8vw;
+  float: right;
+  margin-top: -9vh;
+  margin-right: 30vw;
+}
+.hat {
+  width: 30vw;
+  height: 48vh;
+}
+.kroger {
+  width: 48vw;
+  height: 48vh;
+}
+.twitter {
+  width: 8vw;
+  height: 8vh;
+}
+.snap {
+  width: 8vw;
+  height: 8vh;
+  margin-left: 5vw;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

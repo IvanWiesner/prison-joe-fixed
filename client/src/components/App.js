@@ -5,6 +5,7 @@ import WorkPage from "./WorkPage"
 import MerchPage from "./MerchPage"
 import ViewCart from "./ViewCart"
 import CheckoutPage from "./CheckoutPage"
+import HomePage from "./HomePage"
 import { 
   BrowserRouter as Router, 
   Route,
@@ -16,16 +17,16 @@ function App() {
   const [login, setLogin] = useState(false);
   // const [superLogin, setSuperLogin] = useState(false)
   const [reviews, SetReviews] = useState([])
-  const [merch, setMerch] = useState([])
+  const [merches, setMerches] = useState([])
 
   function handleNewReviews(newReview) {
     SetReviews([...reviews, newReview])
 }
 
 useEffect(() => {
-  fetch("https://prison-joe.herokuapp.com/merches")
+  fetch("http://localhost:3000/merches")
     .then((resp) => resp.json())
-    .then((data) => setMerch(data))
+    .then((data) => setMerches(data))
 }, []);
 
   return (
@@ -33,6 +34,13 @@ useEffect(() => {
       <div className="App">
         <div className="navbar">
           <h1 className="navbar-title">Prison Joe</h1>
+          <img className="logo" src="https://i.imgur.com/woGFDn2.png"/>
+          <a href="https://twitter.com/joe_prison">
+            <img className="twitter" src="https://i.imgur.com/LGpM9wt.png"/>
+          </a>
+          <a href="https://www.snapchat.com/add/sethepoo?share_id=RTc1RkJF&locale=en_US">
+            <img className="snap" src="https://i.imgur.com/V6YikB0.jpg"/>
+          </a>
           <nav className="navbar-bar">
             <Link to="/">Home</Link> |
             <Link to="/work"> Work Info </Link> |
@@ -45,10 +53,13 @@ useEffect(() => {
           component={() => <Login login={true}
           setLogin={setLogin}
         /> }/>
+         <Route exact path="/"
+          component ={() => <HomePage login={true}
+        />} />
         <Route path="/merch"
         component={() => <MerchPage login={true}
-        merch={merch}
-        setMerch={setMerch}
+        merches={merches}
+        setMerches={setMerches}
         handleNewReviews={handleNewReviews}
         />} />
         <Route path="/cart"
