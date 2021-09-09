@@ -47,4 +47,4 @@ puts "reviews done"
 
 puts "purchase history start?"
 
-Purchase.create(quantity: 100, price: 25, merch_id: Merch.all.sample.id)
+Purchase.create(quantity: 100, price: 27, merch_id: Merch.all.sample.id)

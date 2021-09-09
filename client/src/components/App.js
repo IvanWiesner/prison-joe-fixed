@@ -6,6 +6,7 @@ import MerchPage from "./MerchPage"
 import ViewCart from "./ViewCart"
 import CheckoutPage from "./CheckoutPage"
 import HomePage from "./HomePage"
+import NewMerch from "./NewMerch"
 import { 
   BrowserRouter as Router, 
   Route,
@@ -14,7 +15,8 @@ import {
   } from "react-router-dom";
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
+  // true = shows on navbar
   // const [superLogin, setSuperLogin] = useState(false)
   const [reviews, SetReviews] = useState([])
   const [merches, setMerches] = useState([])
@@ -44,32 +46,39 @@ useEffect(() => {
           <nav className="navbar-bar">
             <Link to="/">Home</Link> |
             <Link to="/work"> Work Info </Link> |
-            <Link to="/merch"> Merch </Link>
+            <Link to="/merch"> Merch </Link> |
+            {login && <Link to="/newmerch"> New Merch </Link>}
           </nav>
         </div>
 
         <Switch>
           <Route path="/login"
-          component={() => <Login login={true}
+          component={() => <Login
           setLogin={setLogin}
-        /> }/>
+          /> }/>
          <Route exact path="/"
-          component ={() => <HomePage login={true}
+          component ={() => <HomePage 
         />} />
         <Route path="/merch"
-        component={() => <MerchPage login={true}
+        component={() => <MerchPage 
         merches={merches}
         setMerches={setMerches}
         handleNewReviews={handleNewReviews}
         />} />
         <Route path="/cart"
-        component={() => <ViewCart login={true}
+        component={() => <ViewCart 
+        merches={merches}
         />} />
         <Route path="/work"
-        component={() => <WorkPage login={true}
+        component={() => <WorkPage 
         />} />
         <Route path="/checkout"
-        component={() => <CheckoutPage login={true}
+        component={() => <CheckoutPage 
+        />} />
+        <Route path="/nemerch"
+        component={() => <NewMerch login={true}
+        merches={merches}
+        
         />} />
         </Switch>
       </div>

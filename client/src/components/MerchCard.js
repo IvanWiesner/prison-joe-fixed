@@ -25,6 +25,7 @@ function MerchCard({merch, handleNewReviews, reviews}) {
     return (
       <div className="MerchCard">
           <header>
+              {reviews.map(review => <p>{review.comment}</p>)}
               <button onClick={() => history.push('/cart')}>Go to Cart ({cart.length})</button>
           </header>
           {page === "merch" && renderMerch()}
