@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import { useHistory } from "react-router-dom"
+import CheckoutPage from "./CheckoutPage"
 
 function MerchCard({merch, handleNewReviews, reviews}) {
     const [cart, setCart] = useState([])

@@ -74,6 +74,7 @@ useEffect(() => {
         />} />
         <Route path="/checkout"
         component={() => <CheckoutPage 
+        merches={merches}
         />} />
         <Route path="/newmerch"
         component={() => <NewMerch login={true}
