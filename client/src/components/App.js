@@ -75,10 +75,10 @@ useEffect(() => {
         <Route path="/checkout"
         component={() => <CheckoutPage 
         />} />
-        <Route path="/nemerch"
+        <Route path="/newmerch"
         component={() => <NewMerch login={true}
         merches={merches}
-        
+
         />} />
         </Switch>
       </div>

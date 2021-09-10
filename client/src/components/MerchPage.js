@@ -1,5 +1,6 @@
 import React, {useState, useEffect}  from "react"
 import MerchCard from "./MerchCard";
+import NewMerch from "./NewMerch";
 
 function MerchPage({merches, setMerches, handleNewReviews}) {
     
@@ -13,6 +14,10 @@ function MerchPage({merches, setMerches, handleNewReviews}) {
 
 return (
     <main>
+        <NewMerch 
+        merches={merches}
+        reviews={reviews}
+        />
     {merches.map(merch => {
         return (
         <MerchCard 
