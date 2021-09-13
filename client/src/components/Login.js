@@ -24,6 +24,7 @@ function LoginPage({setLogin}){
         })
         .then(res => res.json())
         .then(json => {
+            console.log(json)
             if(json.error){
                 setErrors(json.error)
             }else {
@@ -48,7 +49,7 @@ function LoginPage({setLogin}){
             {/* <input type="submit" value="Sign up to acess Website!"/> */}
             <input type="submit" value="Login"/>
             </form>
-            {/* {errors?errors.map(e => <Errors>{e}</Errors>):null} */}
+            {errors?errors.map(e => <p>{e}</p>):null}
         </div>
     )
 }

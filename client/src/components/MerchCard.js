@@ -5,9 +5,7 @@ import CheckoutPage from "./CheckoutPage"
 function MerchCard({merch, handleNewReviews, addToCart, reviews,  setReviews}) {
     const [cart, setCart] = useState([])
     const [page, setPage] = useState('merch')
-    const [showReviews, setShowReviews] = useState("")
 
-    
     console.log(reviews)
     let history = useHistory();
     // const toggle=() => {
@@ -23,15 +21,9 @@ function MerchCard({merch, handleNewReviews, addToCart, reviews,  setReviews}) {
           <p>{merch.name}</p>
             <img className="hat" src={merch.image_url}/>
                 <p>$ {merch.price}</p>
-              <button onClick={() => history.push('/cart')}>Go to Cart ({cart.length})</button>
-              {
-                  reviews? <p>{reviews.comment} !</p>:null
-              }
-              <button onClick={() => setReviews(true)}>See Reviews</button>
-              <button onClick={() => setReviews(false)}>Hide Reviews</button>
+              <button onClick={() => history.push('/cart')}>Go to Cart</button>
           </div>
-                
-          <button onClick={() => addToCart(merch)} classname="add-to">Add to Cart</button>
+            <button onClick={() => addToCart(merch)} classname="add-to">Add to Cart</button>
       </div>
     );
   }

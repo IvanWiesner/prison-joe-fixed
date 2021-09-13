@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/me", to: "users#show"
-  post "/login", to: "session#create"
+  post "/login", to: "users#login"
   delete '/logout', to: 'sessions#destroy'
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

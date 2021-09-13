@@ -15,7 +15,7 @@ import {
   } from "react-router-dom";
 
 function App() {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
   // true = shows on navbar
   // const [superLogin, setSuperLogin] = useState(false)
   const [merches, setMerches] = useState([])
@@ -25,16 +25,24 @@ useEffect(() => {
   fetch("http://localhost:3000/merches")
     .then((resp) => resp.json())
     .then((data) => setMerches(data))
+    if (localStorage.cartItems) {
+      setCartItems(JSON.parse(localStorage.cartItems))
+    }
 }, []);
+
 const addToCart = (merch) => {
   const merchExist = cartItems.find((item) => item.id === merch.id)
   if(merchExist){
       setCartItems(cartItems.map((item) => item.id === merch.id ?
       {...merchExist, quantity: merchExist.quantity + 1}: item)
   )
+  localStorage.setItem("cartItems", JSON.stringify(cartItems.map((item) => item.id === merch.id ?
+  {...merchExist, quantity: merchExist.quantity + 1}: item)))
 } else {
   setCartItems([...cartItems, {...merch, quantity: 1 }])
+  localStorage.setItem("cartItems", JSON.stringify([...cartItems, {...merch, quantity: 1 }]))
 }
+
 }
 
   return (
@@ -86,11 +94,11 @@ const addToCart = (merch) => {
         component={() => <CheckoutPage 
         merches={merches}
         />} />
-        <Route path="/newmerch"
-        component={() => <NewMerch login={true}
+        {login &&  <Route path="/newmerch"
+        component={() => <NewMerch login={false}
         merches={merches}
-
-        />} />
+        setMerches={setMerches}
+        />} /> }
         </Switch>
       </div>
     </Router>

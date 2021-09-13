@@ -1,10 +1,11 @@
 import React, {useState, useEffect}  from "react"
 import MerchCard from "./MerchCard";
-import NewMerch from "./NewMerch";
+
 
 function MerchPage({merches, setMerches, addToCart}) {
     
-    const [ reviews, setReviews] = useState(false)
+    const [ reviews, setReviews] = useState([])
+    const [ showReviews, setShowReviews ] = useState(false)
 
     useEffect(() => {
         fetch("http://localhost:3000/reviews")
@@ -19,10 +20,6 @@ function MerchPage({merches, setMerches, addToCart}) {
 
 return (
     <main>
-        <NewMerch 
-        merches={merches}
-        reviews={reviews}
-        />
     {merches.map(merch => {
         return (
         <MerchCard 
@@ -35,6 +32,11 @@ return (
         />
         )
     })}
+    {
+    showReviews? reviews.map((review) => <p>{review.comment}</p>):null
+    }
+     <button onClick={() => setShowReviews(true)}>See Reviews</button>
+     <button onClick={() => setShowReviews(false)}>Hide Reviews</button>
     </main>
     )
 }

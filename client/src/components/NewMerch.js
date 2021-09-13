@@ -1,27 +1,38 @@
 import React, {useState} from "react"
+import { useParams } from "react-router"
 
-function NewMerch({merches}) {
+function NewMerch({merches, setMerches}) {
   const [name, setName] = useState('')
   const [imageURL, setImageURL] = useState('')
   const [price, setPrice] = useState('')
   const [errors, setErrors] = useState([])
 
+
+  // useEffect(() => {
+  //   const addedMerch = merches.find(merch => merch.id == prams.id)
+  //   setName(merch.name)
+  //   setImageURL(merch.imageURL)
+  //   setPrice(merch.price)
+  // }, []);
+
   function onSubmit(e) {
     e.preventDefault()
-    const newMerch = {
+    const addedMerch = {
       name: name,
       image_url: imageURL,
       price: price,
     }
-    fetch("http://localhost:3000/merches", {
+
+    fetch(`http://localhost:3000/merches`, {
       method:'POST',
           headers:{'Content-Type': 'application/json'},
-          body:JSON.stringify(newMerch)
+          body:JSON.stringify(addedMerch)
     })
     .then(res => res.json())
         .then(json => {
-            console.log(json.error)
+            console.log(json)
             if(json.error) setErrors(json.error)
+            setMerches(dataMerches => [...dataMerches, json])
   })
 }
     return (
