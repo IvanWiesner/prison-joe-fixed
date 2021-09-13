@@ -15,14 +15,14 @@ function CheckoutPage({merches}) {
       });
       e.target.reset()
   }
-  const renderCart = () => {
-    const filterCart = merches.filter(merch => {
-    return filterCart.map(merch => {
-      <MerchCard
-      key={merch.id}
-      merch={merch}
-      />
-    })})
+  // const renderCart = () => {
+  //   const filterCart = merches.filter(merch => {
+  //   return filterCart.map(merch => {
+  //     <MerchCard
+  //     key={merch.id}
+  //     merch={merch}
+  //     />
+  //   })})
 return (
 <div className="order-container">
   <form onSubmit={sendEmail}>
@@ -37,11 +37,11 @@ return (
         <input type="submit" value="Submit Order"/>
     </div>
     <div>
-      {renderCart()}
+      {/* {renderCart()} */}
     </div>
 </form>
 </div>
 );
-}}
+}
   
   export default CheckoutPage;

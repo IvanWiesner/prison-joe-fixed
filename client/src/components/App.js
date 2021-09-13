@@ -18,18 +18,24 @@ function App() {
   const [login, setLogin] = useState(true);
   // true = shows on navbar
   // const [superLogin, setSuperLogin] = useState(false)
-  const [reviews, SetReviews] = useState([])
   const [merches, setMerches] = useState([])
-
-  function handleNewReviews(newReview) {
-    SetReviews([...reviews, newReview])
-}
+  const [cartItems, setCartItems] = useState([])
 
 useEffect(() => {
   fetch("http://localhost:3000/merches")
     .then((resp) => resp.json())
     .then((data) => setMerches(data))
 }, []);
+const addToCart = (merch) => {
+  const merchExist = cartItems.find((item) => item.id === merch.id)
+  if(merchExist){
+      setCartItems(cartItems.map((item) => item.id === merch.id ?
+      {...merchExist, quantity: merchExist.quantity + 1}: item)
+  )
+} else {
+  setCartItems([...cartItems, {...merch, quantity: 1 }])
+}
+}
 
   return (
     <Router>
@@ -63,11 +69,15 @@ useEffect(() => {
         component={() => <MerchPage 
         merches={merches}
         setMerches={setMerches}
-        handleNewReviews={handleNewReviews}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+        addToCart={addToCart}
         />} />
         <Route path="/cart"
         component={() => <ViewCart 
         merches={merches}
+        cartItems={cartItems}
+        addToCart={addToCart}
         />} />
         <Route path="/work"
         component={() => <WorkPage 
