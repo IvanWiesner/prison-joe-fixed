@@ -50,7 +50,9 @@ const addToCart = (merch) => {
       <div className="App">
         <div className="navbar">
           <h1 className="navbar-title">Prison Joe</h1>
+          <div>
           <img className="logo" src="https://i.imgur.com/woGFDn2.png"/>
+          </div>
           <a href="https://twitter.com/joe_prison">
             <img className="twitter" src="https://i.imgur.com/LGpM9wt.png"/>
           </a>
@@ -63,6 +65,7 @@ const addToCart = (merch) => {
             <Link to="/merch"> Merch </Link> |
             {login && <Link to="/newmerch"> New Merch </Link>}
           </nav>
+
         </div>
 
         <Switch>

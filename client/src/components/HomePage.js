@@ -2,9 +2,12 @@ import React from "react"
 
 function HomePage() {
     return (
-      <div className="App">
-        <h1>About Prison Joe </h1>
-        <p>
+      <div className="home-page">
+        <video autoplay loop muted id="beef">
+          <source src="https://i.imgur.com/qME5gIZ.mp4" type="video/mp4"/>
+        </video>
+        <h2 className="home-header">About Prison Joe </h2>
+        <p className="home-text">
         For Business Inquirys-prisonjoe55@gmail.com
 
         Top 1300 Vorkath Kc
@@ -20,13 +23,13 @@ function HomePage() {
       or don't.
       Welcome to Prison.
         </p>
-        <h2>Schedule</h2>
-        <p>Limited Basis for now.
+        <h2 className="home-header">Schedule</h2>
+        <p className="home-text">Limited Basis for now.
             Streams will start between 6 and 7PM(CST) on Monday, Tuesday or Wednesday every week.
             Early Streams occasionally on the Weekends!
             I will try to stream at very minimum twice a week!</p>
-        <h2>Top Donations</h2>
-        <p>
+        <h2 className="home-header">Top Donations</h2>
+        <p className="home-text"> 
           <ul>
             <li>Money Raised for Charity-600$</li>
             <li>LastSonido 286$</li>
@@ -71,8 +74,8 @@ function HomePage() {
             <li>Ivan-5$</li>
 </ul>
 </p>
-            <h2>Goals</h2>
-            <p>Primary-All Pets
+            <h2 className="home-header">Goals</h2>
+            <p className="home-text">Primary-All Pets
               Secondary-Max
               3000 followers on twitch.
               Base 80s.</p>

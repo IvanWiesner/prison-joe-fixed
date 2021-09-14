@@ -16,10 +16,17 @@ function MerchPage({merches, setMerches, addToCart}) {
       function handleNewReviews(newReview) {
         setReviews([...reviews, newReview])
     }
+    function deleteReviews(reviewToDelete) {
+        console.log('deleteReviews', reviewToDelete)
+        const remaingingReviews = reviews.filter(review => {
+            return review !== reviewToDelete
+        })
+        setReviews({ reviews: remaingingReviews})
+    }
     
 
 return (
-    <main>
+    <div>
     {merches.map(merch => {
         return (
         <MerchCard 
@@ -33,11 +40,15 @@ return (
         )
     })}
     {
-    showReviews? reviews.map((review) => <p>{review.comment}</p>):null
+    showReviews? reviews.map((review) => <p>{review.comment}
+    <button onClick={() => deleteReviews(reviews)}>X</button>
+    {/* <button onClick={() => handleNewReviews(newReview)}>Add Review</button> */}
+    </p>):null
     }
-     <button onClick={() => setShowReviews(true)}>See Reviews</button>
-     <button onClick={() => setShowReviews(false)}>Hide Reviews</button>
-    </main>
+     <button className="review-button" onClick={() => setShowReviews(true)}>See Reviews</button>
+     <button className="review-button" onClick={() => setShowReviews(false)}>Hide Reviews</button>
+    </div>
     )
 }
   export default MerchPage;
+  

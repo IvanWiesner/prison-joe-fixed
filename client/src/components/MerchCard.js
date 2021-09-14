@@ -3,10 +3,7 @@ import { useHistory } from "react-router-dom"
 import CheckoutPage from "./CheckoutPage"
 
 function MerchCard({merch, handleNewReviews, addToCart, reviews,  setReviews}) {
-    const [cart, setCart] = useState([])
-    const [page, setPage] = useState('merch')
 
-    console.log(reviews)
     let history = useHistory();
     // const toggle=() => {
     //     setReviews(!reviews)
@@ -14,6 +11,7 @@ function MerchCard({merch, handleNewReviews, addToCart, reviews,  setReviews}) {
             // {/* {reviews.filter(review => <p>{review.comment}</p>)} */}
             // 
             // ))} */}
+    
        
     return (
       <div className="MerchCard">
@@ -29,11 +27,3 @@ function MerchCard({merch, handleNewReviews, addToCart, reviews,  setReviews}) {
   }
   
   export default MerchCard;
-  {/* {reviews.map((review) => (
-                 <button 
-                 key={review}
-                 classname="review-button"
-                 onClick={() => setShowReviews(reviews)} 
-                 >
-             </button>
-            ))} */}
