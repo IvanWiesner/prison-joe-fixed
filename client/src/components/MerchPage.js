@@ -2,7 +2,7 @@ import React, {useState, useEffect}  from "react"
 import MerchCard from "./MerchCard";
 
 
-function MerchPage({merches, setMerches, addToCart}) {
+function MerchPage({merches, setMerches, addToCart, login}) {
     
     const [ reviews, setReviews] = useState([])
     const [ showReviews, setShowReviews ] = useState(false)
@@ -13,15 +13,19 @@ function MerchPage({merches, setMerches, addToCart}) {
           .then((data) => setReviews(data));
       }, []);
 
+      
       function handleNewReviews(newReview) {
         setReviews([...reviews, newReview])
     }
     function deleteReviews(reviewToDelete) {
+        fetch(`http://localhost:3000/reviews/${reviewToDelete.id}`, {
+            method: 'DELETE'
+        })
         console.log('deleteReviews', reviewToDelete)
         const remaingingReviews = reviews.filter(review => {
             return review !== reviewToDelete
         })
-        setReviews({ reviews: remaingingReviews})
+        setReviews(remaingingReviews)
     }
     
 
@@ -39,9 +43,10 @@ return (
         />
         )
     })}
+
     {
     showReviews? reviews.map((review) => <p>{review.comment}
-    <button onClick={() => deleteReviews(reviews)}>X</button>
+    {login && <button onClick={() => deleteReviews(review)}>X</button>}
     {/* <button onClick={() => handleNewReviews(newReview)}>Add Review</button> */}
     </p>):null
     }

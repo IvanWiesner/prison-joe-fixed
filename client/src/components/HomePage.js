@@ -9,25 +9,38 @@ function HomePage() {
         <h2 className="home-header">About Prison Joe </h2>
         <p className="home-text">
         For Business Inquirys-prisonjoe55@gmail.com
-
+        <br></br>
         Top 1300 Vorkath Kc
+        <br></br>
         Top 3000 Zulrah Kc
+        <br></br>
         World Record 32 Hr Zulrah Only Stream.
+        <br></br>
         5 Total 24 Hours Streams.
+        <br></br>
 
-      Other info-
+      Other info
+      <br></br>
       Works for the Gov.
+      <br></br>
       Very Sarcastic.
+      <br></br>
       Enjoys soft core on HBO.
+      <br></br>
       Follow me please.
+      <br></br>
       or don't.
+      <br></br>
       Welcome to Prison.
+      <br></br>
         </p>
+        <img src="https://i.imgur.com/6ChB4tB.jpg" id="beef"/>
         <h2 className="home-header">Schedule</h2>
         <p className="home-text">Limited Basis for now.
             Streams will start between 6 and 7PM(CST) on Monday, Tuesday or Wednesday every week.
             Early Streams occasionally on the Weekends!
             I will try to stream at very minimum twice a week!</p>
+            <img src=""/>
         <h2 className="home-header">Top Donations</h2>
         <p className="home-text"> 
           <ul>
@@ -74,6 +87,7 @@ function HomePage() {
             <li>Ivan-5$</li>
 </ul>
 </p>
+            <img src=""/>
             <h2 className="home-header">Goals</h2>
             <p className="home-text">Primary-All Pets
               Secondary-Max

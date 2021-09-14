@@ -83,6 +83,7 @@ const addToCart = (merch) => {
         cartItems={cartItems}
         setCartItems={setCartItems}
         addToCart={addToCart}
+        login={login}
         />} />
         <Route path="/cart"
         component={() => <ViewCart 

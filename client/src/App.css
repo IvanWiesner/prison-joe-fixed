@@ -19,6 +19,8 @@
   font-style: oblique;
 }
 .home-header {
+  height: 100%;
+  width: 100%;
   font-size: 10vh;
   font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;  
   font-weight: 3000;
@@ -35,8 +37,10 @@
 }
 .home-text {
   font-family: Montserrat,sans-serif;
-  font-size: 4vh;
+  font-size: 3vh;
   color: rgb(213, 144, 17);
+  height: 100%;
+  width: 100%;
 }
 .navbar-title {
   font-size: 3rem;
