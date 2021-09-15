@@ -35,13 +35,9 @@ ActiveRecord::Schema.define(version: 2021_09_02_200421) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "merch_id", null: false
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["merch_id"], name: "index_reviews_on_merch_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -58,6 +54,4 @@ ActiveRecord::Schema.define(version: 2021_09_02_200421) do
 
   add_foreign_key "purchases", "merches"
   add_foreign_key "purchases", "users"
-  add_foreign_key "reviews", "merches"
-  add_foreign_key "reviews", "users"
 end

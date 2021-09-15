@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-    has_many :reviews, dependent: :destroy
-    has_many :reviewed_merches, through: :reviews, source: :merches
     has_many :purchases, dependent: :destroy
     has_many :merches, through: :purchases
     validates :email, presence: true, uniqueness:true

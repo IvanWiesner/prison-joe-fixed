@@ -6,6 +6,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
     
     const [ reviews, setReviews] = useState([])
     const [ showReviews, setShowReviews ] = useState(false)
+    const [ comment, setComment ] = useState('')
 
     useEffect(() => {
         fetch("http://localhost:3000/reviews")
@@ -13,8 +14,29 @@ function MerchPage({merches, setMerches, addToCart, login}) {
           .then((data) => setReviews(data));
       }, []);
 
+
+
+      function handleSubmit (e) {
+          console.log(handleSubmit)
+        e.stopPropagation()
+        e.preventDefault()
+        const newReviewObject = {
+            comment,
+        }
+        fetch(`http://localhost:3000/reviews`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+          body: JSON.stringify(newReviewObject)
+        })
+        .then(res => res.json())
+        .then((data) => handleNewReview(data), setComment(""));
+      }
       
-      function handleNewReviews(newReview) {
+
+
+      function handleNewReview(newReview) {
         setReviews([...reviews, newReview])
     }
     function deleteReviews(reviewToDelete) {
@@ -37,19 +59,29 @@ return (
         addToCart={addToCart}
         merch={merch}
         key={merch.id}
-        handleNewReviews={handleNewReviews}
         reviews={reviews}
         setReviews={setReviews}
         />
         )
     })}
-
+    <div>
     {
-    showReviews? reviews.map((review) => <p>{review.comment}
+    showReviews? reviews.map((review) => <p className="reviews">"{review.comment}"
     {login && <button onClick={() => deleteReviews(review)}>X</button>}
-    {/* <button onClick={() => handleNewReviews(newReview)}>Add Review</button> */}
     </p>):null
     }
+    </div>
+    <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          name="comment" 
+          placeholder="Comment" 
+          value={comment} 
+          onChange={(e) => setComment(e.target.value)} 
+        />
+        <input className="review-button" type="submit" value="Add Review"/>
+      </form>
+      
      <button className="review-button" onClick={() => setShowReviews(true)}>See Reviews</button>
      <button className="review-button" onClick={() => setShowReviews(false)}>Hide Reviews</button>
     </div>

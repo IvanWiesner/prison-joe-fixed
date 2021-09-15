@@ -6,42 +6,20 @@ function HomePage() {
         <video autoplay loop muted id="beef">
           <source src="https://i.imgur.com/qME5gIZ.mp4" type="video/mp4"/>
         </video>
-        <h2 className="home-header">About Prison Joe </h2>
+        <h2 className="home-header">The WIDEST Streamer on Twitch </h2>
         <p className="home-text">
-        For Business Inquirys-prisonjoe55@gmail.com
         <br></br>
-        Top 1300 Vorkath Kc
+        - Top 1300 Vorkath Kc
         <br></br>
-        Top 3000 Zulrah Kc
+        - Top 3000 Zulrah Kc
         <br></br>
-        World Record 32 Hr Zulrah Only Stream.
+        - World Record 32 Hr Zulrah Only Stream.
         <br></br>
-        5 Total 24 Hours Streams.
-        <br></br>
-
-      Other info
-      <br></br>
-      Works for the Gov.
-      <br></br>
-      Very Sarcastic.
-      <br></br>
-      Enjoys soft core on HBO.
-      <br></br>
-      Follow me please.
-      <br></br>
-      or don't.
-      <br></br>
-      Welcome to Prison.
+        - 5 Total 24 Hours Streams.
       <br></br>
         </p>
-        <img src="https://i.imgur.com/6ChB4tB.jpg" id="beef"/>
-        <h2 className="home-header">Schedule</h2>
-        <p className="home-text">Limited Basis for now.
-            Streams will start between 6 and 7PM(CST) on Monday, Tuesday or Wednesday every week.
-            Early Streams occasionally on the Weekends!
-            I will try to stream at very minimum twice a week!</p>
-            <img src=""/>
-        <h2 className="home-header">Top Donations</h2>
+            <img src="https://images.unsplash.com/photo-1586034679970-cb7b5fc4928a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1vbmV5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
+        <h2 className="home-header">Supporters</h2>
         <p className="home-text"> 
           <ul>
             <li>Money Raised for Charity-600$</li>
@@ -87,12 +65,6 @@ function HomePage() {
             <li>Ivan-5$</li>
 </ul>
 </p>
-            <img src=""/>
-            <h2 className="home-header">Goals</h2>
-            <p className="home-text">Primary-All Pets
-              Secondary-Max
-              3000 followers on twitch.
-              Base 80s.</p>
       </div>
     );
   }
