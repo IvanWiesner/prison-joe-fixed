@@ -22,7 +22,7 @@ function App() {
   const [cartItems, setCartItems] = useState([])
 
 useEffect(() => {
-  fetch("http://localhost:3000/merches")
+  fetch("https://prison-joe.herokuapp.com/merches")
     .then((resp) => resp.json())
     .then((data) => setMerches(data))
     if (localStorage.cartItems) {

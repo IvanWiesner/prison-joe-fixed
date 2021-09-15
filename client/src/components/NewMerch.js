@@ -23,7 +23,7 @@ function NewMerch({merches, setMerches}) {
       price: price,
     }
 
-    fetch(`http://localhost:3000/merches`, {
+    fetch(`https://prison-joe.herokuapp.com/merches`, {
       method:'POST',
           headers:{'Content-Type': 'application/json'},
           body:JSON.stringify(addedMerch)

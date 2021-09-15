@@ -9,7 +9,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
     const [ comment, setComment ] = useState('')
 
     useEffect(() => {
-        fetch("http://localhost:3000/reviews")
+        fetch("https://prison-joe.herokuapp.com/reviews")
           .then((resp) => resp.json())
           .then((data) => setReviews(data));
       }, []);
@@ -23,7 +23,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
         const newReviewObject = {
             comment,
         }
-        fetch(`http://localhost:3000/reviews`, {
+        fetch(`https://prison-joe.herokuapp.com/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
         setReviews([...reviews, newReview])
     }
     function deleteReviews(reviewToDelete) {
-        fetch(`http://localhost:3000/reviews/${reviewToDelete.id}`, {
+        fetch(`https://prison-joe.herokuapp.com/reviews/${reviewToDelete.id}`, {
             method: 'DELETE'
         })
         console.log('deleteReviews', reviewToDelete)
