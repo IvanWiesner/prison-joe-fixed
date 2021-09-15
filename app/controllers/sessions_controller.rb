@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-        skip_before_action :authorize, only: [:create, :index]
+        # skip_before_action :authorize, only: [:create, :index]
     
         def index
             cookies[:cookies_hi] ||= 'test cookie'
