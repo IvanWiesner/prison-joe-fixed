@@ -22,7 +22,7 @@ function App() {
   const [cartItems, setCartItems] = useState([])
 
 useEffect(() => {
-  fetch("https://prison-joe.herokuapp.com/merches")
+  fetch("/merches")
     .then((resp) => resp.json())
     .then((data) => setMerches(data))
     if (localStorage.cartItems) {
@@ -51,17 +51,21 @@ const addToCart = (merch) => {
         
         <div className="navbar">
         <div className="top-logos">
-          <h1 className="navbar-title">Experience Prison</h1>
+          <header className="top-header">
           <img className="logo" src="https://i.imgur.com/woGFDn2.png"/>
-          <a href="https://www.twitch.tv/prisonjoe">https://www.twitch.tv/prisonjoe</a>
+          <ul>
+          <p className="navbar-title">Experience Prison</p>
+          <a href="https://www.twitch.tv/prisonjoe">
+            <img className="twitch"src="https://i.imgur.com/RcGaNSP.png"/>
+          </a>
           <a href="https://twitter.com/joe_prison">
-            Twitter
             <img className="twitter" src="https://i.imgur.com/LGpM9wt.png"/>
           </a>
           <a href="https://www.snapchat.com/add/sethepoo?share_id=RTc1RkJF&locale=en_US">
-            SnapChat
             <img className="snap" src="https://i.imgur.com/V6YikB0.jpg"/>
           </a>
+          </ul>
+          </header>
           </div>
           <input type="checkbox" id="ham-menu"/>
           <label for="ham-menu">

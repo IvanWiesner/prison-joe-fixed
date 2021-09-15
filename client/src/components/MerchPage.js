@@ -9,7 +9,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
     const [ comment, setComment ] = useState('')
 
     useEffect(() => {
-        fetch("https://prison-joe.herokuapp.com/reviews")
+        fetch("/reviews")
           .then((resp) => resp.json())
           .then((data) => setReviews(data));
       }, []);
@@ -23,7 +23,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
         const newReviewObject = {
             comment,
         }
-        fetch(`https://prison-joe.herokuapp.com/reviews`, {
+        fetch(`/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
         setReviews([...reviews, newReview])
     }
     function deleteReviews(reviewToDelete) {
-        fetch(`https://prison-joe.herokuapp.com/reviews/${reviewToDelete.id}`, {
+        fetch(`/reviews/${reviewToDelete.id}`, {
             method: 'DELETE'
         })
         console.log('deleteReviews', reviewToDelete)
@@ -68,10 +68,12 @@ return (
     {
     showReviews? reviews.map((review) => <p className="reviews">"{review.comment}"
     {login && <button onClick={() => deleteReviews(review)}>X</button>}
-    </p>):null
-    }
+    </p>):null}
     </div>
-    <form onSubmit={handleSubmit}>
+    
+     <button className="review-button" onClick={() => setShowReviews(true)}>See Reviews</button>
+     <button className="review-button" onClick={() => setShowReviews(false)}>Hide Reviews</button>
+     <form onSubmit={handleSubmit}>
         <input 
           type="text" 
           name="comment" 
@@ -81,9 +83,6 @@ return (
         />
         <input className="review-button" type="submit" value="Add Review"/>
       </form>
-      
-     <button className="review-button" onClick={() => setShowReviews(true)}>See Reviews</button>
-     <button className="review-button" onClick={() => setShowReviews(false)}>Hide Reviews</button>
     </div>
     )
 }

@@ -18,7 +18,6 @@ function HomePage() {
         - 5 Total 24 Hours Streams.
       <br></br>
         </p>
-            <img src="https://images.unsplash.com/photo-1586034679970-cb7b5fc4928a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1vbmV5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"/>
         <h2 className="home-header">Supporters</h2>
         <p className="home-text"> 
           <ul>
