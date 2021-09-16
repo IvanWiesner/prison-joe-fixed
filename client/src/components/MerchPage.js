@@ -1,5 +1,6 @@
 import React, {useState, useEffect}  from "react"
 import MerchCard from "./MerchCard";
+import Button from "react-bootstrap/button";
 
 
 function MerchPage({merches, setMerches, addToCart, login}) {
@@ -72,8 +73,8 @@ return (
     </p>):null}
     </div>
     
-     <button className="review-button" onClick={() => setShowReviews(true)}>See Reviews</button>
-     <button className="review-button" onClick={() => setShowReviews(false)}>Hide Reviews</button>
+     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(true)}>See Reviews</button>
+     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(false)}>Hide Reviews</button>
      <form onSubmit={handleSubmit}>
         <input 
           type="text" 

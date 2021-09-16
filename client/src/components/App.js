@@ -7,6 +7,8 @@ import ViewCart from "./ViewCart"
 import CheckoutPage from "./CheckoutPage"
 import HomePage from "./HomePage"
 import NewMerch from "./NewMerch"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Navbar, Container, Nav, Image, Col} from "react-bootstrap";
 import { 
   BrowserRouter as Router, 
   Route,
@@ -48,47 +50,46 @@ const addToCart = (merch) => {
   return (
     <Router>
       <div className="App">
-        
-        <div className="navbar">
-        <div className="top-logos">
+    <Navbar bg="dark" variant="dark">
+    <Container>
+    <Navbar.Brand href="#home">Prison Joe
+    <Col xs={6} md={4}>
+      <Image src="https://i.imgur.com/woGFDn2.png" fluid />
+    </Col>
+    </Navbar.Brand>
+    <Nav className="me-auto">
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/work">Work Info</Nav.Link>
+      <Nav.Link href="merch">Merch</Nav.Link>
+      <Nav.Link href="Login">Seth Go Here</Nav.Link>
+      {login &&  <Nav.Link href="/newmerch">Add New Merch</Nav.Link>}
+    </Nav>
+    </Container>
+    </Navbar>
+
+          <div className="top-logos">
           <header className="top-header">
-          <img className="logo" src="https://i.imgur.com/woGFDn2.png"/>
+          {/* <img className="logo" src="https://i.imgur.com/woGFDn2.png"/> */}
           <ul>
           <p className="navbar-title">Experience Prison</p>
           <a href="https://www.twitch.tv/prisonjoe" target="_blank">
-            <img className="twitch"src="https://i.imgur.com/RcGaNSP.png"/>
+          <Col xs={2} md={1}>
+            <Image fluid src="https://i.imgur.com/RcGaNSP.png"/>
+            </Col>
           </a>
           <a href="https://twitter.com/joe_prison" target="_blank">
-            <img className="twitter" src="https://i.imgur.com/LGpM9wt.png"/>
+          <Col xs={2} md={1}>
+            <Image fluid src="https://i.imgur.com/LGpM9wt.png"/>
+            </Col>
           </a>
           <a href="https://www.snapchat.com/add/sethepoo?share_id=RTc1RkJF&locale=en_US" target="_blank">
-            <img className="snap" src="https://i.imgur.com/V6YikB0.jpg"/>
+          <Col xs={2} md={1}>
+            <Image fluid src="https://i.imgur.com/V6YikB0.jpg"/>
+            </Col>
           </a>
           </ul>
           </header>
           </div>
-          <input type="checkbox" id="ham-menu"/>
-          <label for="ham-menu">
-            <div class="hide-des">
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-            </div>
-          </label>
-          <div class="full-page-green"></div>
-          <div class="ham-menu">
-            <ul className="centre-text bold-text">
-            <li> <Link to="/">Home</Link> </li> 
-            <li> <Link to="/work"> Work Info </Link> </li>
-            <li> <Link to="/merch"> Merch </Link> </li>
-            <li> {login && <Link to="/newmerch"> New Merch </Link>} </li>
-          </ul>
-          </div>
-        </div>
-
         <Switch>
           <Route path="/login"
           component={() => <Login
