@@ -42,6 +42,10 @@
   height: 100%;
   width: 100%;
 }
+.paypal {
+  height: 10vh;
+  width: 10vw;
+}
 .navbar-title {
   font-size: 6rem;
   line-height: 1.2;

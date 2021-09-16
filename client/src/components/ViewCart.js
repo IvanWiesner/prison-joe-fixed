@@ -23,8 +23,8 @@ function ViewCart({merch, cartItems}) {
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_s-xclick" />
             <input type="hidden" name="hosted_button_id" value="Z8BAUHWBBBJCY"/>
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+            <input type="image" src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404__480.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+            <img className="paypal" alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
             </form>
         </div>
         
