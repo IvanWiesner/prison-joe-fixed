@@ -42,17 +42,16 @@
   height: 100%;
   width: 100%;
 }
-/* .navbar-title {
-  font-size: 3rem;
+.navbar-title {
+  font-size: 6rem;
   line-height: 1.2;
   margin: 0;
   padding: 0;
   flex-grow: 1;
   z-index: 1;
-  margin-bottom: -10vh;
-  color: white;
+  color: rgb(0, 0, 0);
   position: relative;
-} */
+}
 #beef {
   height: 100%;
   width: 100%;

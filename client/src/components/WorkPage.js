@@ -11,7 +11,7 @@ function WorkPage() {
             <br></br>2020 Kroger games.</p>
         <img className ="kroger" src="https://i.imgur.com/6WV2Izz.png"/>
         <br></br>
-        <a href="https://jobs.kroger.com">Job Info</a>
+        <a href="https://jobs.kroger.com" target="_blank">Job Info</a>
       </div>
     );
   }
