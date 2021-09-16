@@ -66,7 +66,8 @@ return (
     })}
     <div>
     {
-    showReviews? reviews.map((review) => <p className="reviews">"{review.comment}"
+    showReviews? 
+    reviews.map((review) => <p className="reviews">"{review.comment}"
     {login && <button onClick={() => deleteReviews(review)}>X</button>}
     </p>):null}
     </div>
@@ -81,7 +82,7 @@ return (
           value={comment} 
           onChange={(e) => setComment(e.target.value)} 
         />
-        <input className="review-button" type="submit" value="Add Review"/>
+       
       </form>
     </div>
     )
