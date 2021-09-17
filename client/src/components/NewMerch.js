@@ -36,23 +36,23 @@ function NewMerch({merches, setMerches}) {
   })
 }
     return (
-      <div className="App">
+      <div className="new-merch">
         <form onSubmit={onSubmit}>
-          <label>
-            Product Name:
-            <br></br>
-            </label>
-            <label>
+          
+            <p>Product Name:</p>
+            
+            
             <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
-            Image Link:
+            <p></p>Image Link:
             <br></br>
-            </label>
-            <label>
+            
+            
             <input type="text" value={imageURL} onChange={(e) => setImageURL(e.target.value)}/>
+            <p></p>
             Item Price:
             <br></br>
             <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>
-          </label>
+          <br></br>
           <input type="submit" value="Add New Merch"/>
         </form>
         {errors?errors.map(e => <div>{e}</div>):null}
