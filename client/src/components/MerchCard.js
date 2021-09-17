@@ -28,12 +28,7 @@ function MerchCard({merch, setMerches, handleNewReviews, addToCart, reviews,  se
               <button type="button" class="btn btn-outline-warning" onClick={() => history.push('/cart')}>Go to Cart</button>
               <button type="button" class="btn btn-outline-warning" onClick={() => addToCart(merch)} classname="add-to">Add to Cart</button>
               <div>
-              {
-              merchButton? 
-              <>
-              {login && <button type="button" class="btn btn-outline-warning" onClick={() => deleteMerches(merch)}>Remove Merch</button>})
-              </>
-            :null}
+              {login && <button type="button" class="btn btn-outline-warning" onClick={() => deleteMerches(merch)}>Remove Merch</button>}
             </div>    
           </div>
       </div>

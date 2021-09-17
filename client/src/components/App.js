@@ -30,7 +30,15 @@ useEffect(() => {
     if (localStorage.cartItems) {
       setCartItems(JSON.parse(localStorage.cartItems))
     }
+    fetch("/me")
+    .then((resp) => resp.json())
+    .then((data) => {
+      if (!data.error) {
+        setLogin(true)
+      }
+    })
 }, []);
+
 
 const addToCart = (merch) => {
   const merchExist = cartItems.find((item) => item.id === merch.id)
