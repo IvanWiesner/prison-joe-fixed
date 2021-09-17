@@ -36,14 +36,15 @@ function LoginPage({setLogin}){
     }
 
     return (
-        <div>
+        <div className="login-here">
             <form onSubmit={onSubmit}>
             <label>
-                Email
+                Email:  <br></br>
                 <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
             </label>
+            <br></br>
             <label>
-                Password
+                Password:  <br></br>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </label>
             {/* <input type="submit" value="Sign up to acess Website!"/> */}

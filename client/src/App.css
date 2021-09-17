@@ -48,3 +48,55 @@
 .ivans {
   display: inline-block;
 }
+.kroger-pic {
+  display: block;
+  margin-left: 33vw;
+  margin-right: auto;
+  width: 100%;
+}
+.hat {
+  height: 30%;
+  width: 30%;
+  margin-left: 35vw;
+}
+.merchcard {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.card {
+  font-size: 5rem;
+  margin-top: 7vh;
+  background-color: rgb(255, 0, 0);
+  color:sandybrown;
+}
+.add-to {
+  margin-top: 7vh;
+}
+.reviews {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.btn {
+  text-align: center;
+}
+.cart-list {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 5rem;
+  margin-top: 7vh;
+  color:sandybrown;
+}
+.merch-name {
+  text-align: center;
+}
+.merch-price {
+  text-align: center;
+}
+.login-here {
+  text-align: center;
+  margin-top: 15vh;
+  height: 150%;
+}

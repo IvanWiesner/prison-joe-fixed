@@ -14,16 +14,15 @@ function MerchCard({merch, handleNewReviews, addToCart, reviews,  setReviews}) {
     
        
     return (
-      <div className="MerchCard">
-          <div>
-          <p>{merch.name}</p>
-            <Col xs={7} md={5}>
-            <Image src={merch.image_url} fluid/>
-            </Col>
-                <p>$ {merch.price}</p>
+      <div className="merchcard">
+          <div className="card">
+          <p className="merch-name">{merch.name}</p>
+            <Image src={merch.image_url} className="hat" fluid/>
+                <p className="merch-price">$ {merch.price}</p>
               <button type="button" class="btn btn-outline-warning" onClick={() => history.push('/cart')}>Go to Cart</button>
+              <button type="button" class="btn btn-outline-warning"onClick={() => addToCart(merch)} classname="add-to">Add to Cart</button>
           </div>
-            <button type="button" class="btn btn-outline-warning"onClick={() => addToCart(merch)} classname="add-to">Add to Cart</button>
+           
       </div>
     );
   }

@@ -10,7 +10,7 @@ function WorkPage() {
             <br></br>Some achievements include 4x employee fo the month and fastest bagger in the fall 
             <br></br>2020 Kroger games.</p>
         <Col xs={6} md={4}>
-        <Image src="https://i.imgur.com/6WV2Izz.png"/>
+        <Image className="kroger-pic"src="https://i.imgur.com/6WV2Izz.png"/>
         </Col>
         <br></br>
         <a href="https://jobs.kroger.com" target="_blank">Job Info</a>
