@@ -1,0 +1,50 @@
+.paypal-button {
+  height: auto;
+  width: 20%;
+}
+.work-page {
+  text-align: center;
+}
+.me-auto {
+  white-space: nowrap;
+}
+#records {
+  text-align: center;
+  display: inline;
+  float: middle;
+  margin: auto;
+}
+.supporters {
+  text-align: center;
+  background-color: rgb(255, 155, 155);
+  color: rgb(0, 0, 0);
+  margin-top: 8vh;
+}
+.list-group {
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+}
+#title {
+  text-align: left;
+  color:rgb(255, 0, 0)
+}
+.navbar-title {
+  font-size: 5vh;
+  color:rgb(0, 0, 0);
+  font-style: bold;
+}
+.row {
+  float: middle;
+}
+.top-logos {
+  text-align: center;
+  margin-top: 5vh;
+  margin-left: 27vw;
+}
+#twitch {
+  height: 7vh;
+}
+.ivans {
+  display: inline-block;
+}

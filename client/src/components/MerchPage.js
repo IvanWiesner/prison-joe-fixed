@@ -68,14 +68,12 @@ return (
     <div>
     {
     showReviews? 
-    reviews.map((review) => <p className="reviews">"{review.comment}"
+    <>
+    {reviews.map((review) => <p className="reviews">"{review.comment}"
     {login && <button onClick={() => deleteReviews(review)}>X</button>}
-    </p>):null}
-    </div>
-    
-     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(true)}>See Reviews</button>
-     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(false)}>Hide Reviews</button>
-     <form onSubmit={handleSubmit}>
+    </p>)}
+
+    <form onSubmit={handleSubmit}>
         <input 
           type="text" 
           name="comment" 
@@ -83,8 +81,18 @@ return (
           value={comment} 
           onChange={(e) => setComment(e.target.value)} 
         />
-       
+       <button type="submit">Add Review</button>
       </form>
+    </>
+    
+    :null}
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(true)}>See Reviews</button>
+     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(false)}>Hide Reviews</button>
     </div>
     )
 }

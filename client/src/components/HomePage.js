@@ -3,11 +3,13 @@ import { ListGroup, ListGroupItem, Image, Col } from 'react-bootstrap';
 function HomePage() {
     return (
       <div className="home-page">
-          <Col xs={6} md={4}>
+        <div class="row">
+          <div class="col-2">
+         <h2 className="home-header">The WIDEST Streamer on Twitch </h2>
+    
           <Image src="https://i.imgur.com/b0p0vkv.png" fluid />
-          </Col>
-        <h2 className="home-header">The WIDEST Streamer on Twitch </h2>
-        
+          </div>
+          <div class="col" id="records">
         <ListGroup>
         <ListGroup.Item>- Top 1300 Vorkath Kc</ListGroup.Item>
         
@@ -17,7 +19,9 @@ function HomePage() {
         
         <ListGroup.Item>- 5 Total 24 Hours Streams.</ListGroup.Item>
         </ListGroup>
-        
+        </div>
+        </div>
+        <div className="supporters">
         <h2 className="home-header">Supporters</h2>
         <p className="home-text"> 
         <ListGroup>
@@ -64,6 +68,7 @@ function HomePage() {
             <ListGroup.Item>Ivan-5$</ListGroup.Item>
 </ListGroup>
 </p>
+      </div>
       </div>
     );
   }
