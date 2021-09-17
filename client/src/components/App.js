@@ -70,8 +70,8 @@ const addToCart = (merch) => {
     <Nav className="me-auto">
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="/work">Work Info</Nav.Link>
-      <Nav.Link href="merch">Merch</Nav.Link>
-      <Nav.Link href="Login">Seth Go Here</Nav.Link>
+      <Nav.Link href="/merch">Merch</Nav.Link>
+      <Nav.Link href="/login">Seth Go Here</Nav.Link>
       {login &&  <Nav.Link href="/newmerch">Add New Merch</Nav.Link>}
     </Nav>
     </Container>
