@@ -20,9 +20,6 @@ puts "merch start"
 Merch.create(name: "Soap Hat", image_url: "https://i.imgur.com/c5gTq0k.jpg", price: 27)
 Merch.create(name: "Slot 2", image_url: "https://i.imgur.com/0mEPz3C.png", price: "TBD")
 Merch.create(name: "Slot 3", image_url: "https://i.imgur.com/0mEPz3C.png", price: "TBD")
-Merch.create(name: "Slot 4", image_url: "https://i.imgur.com/0mEPz3C.png", price: "TBD")
-Merch.create(name: "Slot 5", image_url: "https://i.imgur.com/0mEPz3C.png", price: "TBD")
-Merch.create(name: "Slot 6", image_url: "https://i.imgur.com/0mEPz3C.png", price: "TBD")
 
 puts "merch done"
 
