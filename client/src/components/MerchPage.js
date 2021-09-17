@@ -1,6 +1,5 @@
 import React, {useState, useEffect}  from "react"
 import MerchCard from "./MerchCard";
-import Button from "react-bootstrap/button";
 
 
 function MerchPage({merches, setMerches, addToCart, login}) {
