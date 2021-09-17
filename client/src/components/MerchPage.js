@@ -62,6 +62,8 @@ return (
         key={merch.id}
         reviews={reviews}
         setReviews={setReviews}
+        setMerches={setMerches}
+        login={login}
         />
         )
     })}
