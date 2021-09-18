@@ -19,6 +19,7 @@ function MerchCard({merch, setMerches, handleNewReviews, addToCart, reviews,  se
       })
       setMerches(remaingingMerches)
   }    
+  
     return (
       <div className="merchcard">
           <div className="card">
