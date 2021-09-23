@@ -10,7 +10,6 @@ import NewMerch from "./NewMerch"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Container, Nav, Image, Col} from "react-bootstrap";
 import { 
-  BrowserRouter as Router, 
   Route,
   Link,
   Switch
@@ -56,7 +55,6 @@ const addToCart = (merch) => {
 }
 
   return (
-    <Router>
       <div className="App">
     <Navbar bg="dark" variant="dark">
     <Container>
@@ -116,9 +114,7 @@ const addToCart = (merch) => {
           component={() => <Login
           setLogin={setLogin}
           /> }/>
-         <Route exact path="/"
-          component ={() => <HomePage 
-        />} />
+         
         <Route path="/merch"
         component={() => <MerchPage 
         merches={merches}
@@ -146,6 +142,9 @@ const addToCart = (merch) => {
         merches={merches}
         setMerches={setMerches}
         />} /> }
+        <Route exact path="/"
+          component ={() => <HomePage 
+        />} />
         </Switch>
         <div>
           <br></br>
@@ -172,7 +171,6 @@ const addToCart = (merch) => {
                 </footer>
               </div>
       </div>
-    </Router>
     
   );
 }
