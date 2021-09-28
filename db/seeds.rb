@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Merch.destroy_all
-Purchase.destroy_all
 Supporter.destroy_all
 Review.destroy_all
 
@@ -91,4 +90,3 @@ puts "supporters end"
 
 puts "purchase history start?"
 
-Purchase.create(quantity: 100, price: 27, merch_id: Merch.all.sample.id)
