@@ -1,6 +1,7 @@
 import React from "react"
 import { ListGroup, ListGroupItem, Image, Col } from 'react-bootstrap';
-function HomePage() {
+function HomePage({ supporters, setSupporters}) {
+  
     return (
       <div className="home-page">
         <div class="row">

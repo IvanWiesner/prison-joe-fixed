@@ -9,11 +9,11 @@ function MerchPage({merches, setMerches, addToCart, login}) {
     const [ comment, setComment ] = useState('')
 
     useEffect(() => {
-        fetch("/reviews")
+        fetch("http://localhost:3000/reviews")
           .then((resp) => resp.json())
           .then((data) => setReviews(data));
       }, []);
-
+console.log(merches)
 
 
       function handleSubmit (e) {
@@ -23,7 +23,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
         const newReviewObject = {
             comment,
         }
-        fetch(`/reviews`, {
+        fetch(`http://localhost:3000/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

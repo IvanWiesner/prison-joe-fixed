@@ -21,23 +21,30 @@ function App() {
   // const [superLogin, setSuperLogin] = useState(false)
   const [merches, setMerches] = useState([])
   const [cartItems, setCartItems] = useState([])
+  const [supporters, setSupporters] = useState([])
 
 useEffect(() => {
-  fetch("/merches")
+  fetch("http://localhost:3000/merches")
     .then((resp) => resp.json())
     .then((data) => setMerches(data))
-    if (localStorage.cartItems) {
-      setCartItems(JSON.parse(localStorage.cartItems))
-    }
-    fetch("/me")
-    .then((resp) => resp.json())
-    .then((data) => {
-      if (!data.error) {
-        setLogin(true)
-      }
-    })
-}, []);
+  }, []);
+    // if (localStorage.cartItems) {
+    //   setCartItems(JSON.parse(localStorage.cartItems))
+    // }
+    // fetch("/me")
+    // .then((resp) => resp.json())
+    // .then((data) => {
+    //   if (!data.error) {
+    //     setLogin(true)
+    //   }
+    // })
+    useEffect(() => {
+      fetch("http://localhost:3000/supporters")
+        .then((resp) => resp.json())
+        .then((data) => setSupporters(data))
+      }, []);
 
+console.log(merches)
 
 const addToCart = (merch) => {
   const merchExist = cartItems.find((item) => item.id === merch.id)
@@ -144,6 +151,8 @@ const addToCart = (merch) => {
         />} /> }
         <Route exact path="/"
           component ={() => <HomePage 
+        supporters={supporters}
+        setSupporters={setSupporters}
         />} />
         </Switch>
         <div>
