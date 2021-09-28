@@ -23,17 +23,6 @@ ActiveRecord::Schema.define(version: 2021_09_23_224838) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "purchases", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "merch_id", null: false
-    t.integer "quantity"
-    t.integer "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["merch_id"], name: "index_purchases_on_merch_id"
-    t.index ["user_id"], name: "index_purchases_on_user_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
@@ -63,8 +52,6 @@ ActiveRecord::Schema.define(version: 2021_09_23_224838) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "purchases", "merches"
-  add_foreign_key "purchases", "users"
   add_foreign_key "supporters", "merches"
   add_foreign_key "supporters", "users"
 end
