@@ -40,7 +40,7 @@ function App() {
       .then((data) => setSupporters(data));
   }, []);
 
-  console.log(merches);
+  console.log('merches +++', merches);
 
   const addToCart = (merch) => {
     const merchExist = cartItems.find((item) => item.id === merch.id);
