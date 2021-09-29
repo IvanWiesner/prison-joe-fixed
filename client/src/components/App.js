@@ -24,7 +24,7 @@ function App() {
   const [supporters, setSupporters] = useState([])
 
 useEffect(() => {
-  fetch("http://localhost:3000/merches")
+  fetch("/merches")
     .then((resp) => resp.json())
     .then((data) => setMerches(data))
   }, []);
@@ -39,7 +39,7 @@ useEffect(() => {
     //   }
     // })
     useEffect(() => {
-      fetch("http://localhost:3000/supporters")
+      fetch("/supporters")
         .then((resp) => resp.json())
         .then((data) => setSupporters(data))
       }, []);
