@@ -13,7 +13,7 @@ function MerchPage({merches, setMerches, addToCart, login}) {
           .then((resp) => resp.json())
           .then((data) => setReviews(data));
       }, []);
-console.log(merches)
+console.log(handleSubmit)
 
 
       function handleSubmit (e) {
@@ -92,8 +92,8 @@ return (
     <br></br>
     <br></br>
     <br></br>
-     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(true)}>See Reviews</button>
-     <button type="button" class="btn btn-outline-danger" onClick={() => setShowReviews(false)}>Hide Reviews</button>
+     <button type="button" id="reviews" class="btn btn-outline-danger" onClick={() => setShowReviews(true)}>See Reviews</button>
+     <button type="button" id="reviews" class="btn btn-outline-danger" onClick={() => setShowReviews(false)}>Hide Reviews</button>
     </div>
     )
 }
