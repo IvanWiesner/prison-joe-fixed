@@ -1,6 +1,17 @@
+.App {
+  background-color: rgb(162, 162, 162);
+}
+.work-page {
+  color: rgb(108, 0, 0);
+  font-weight: bolder
+}
 .paypal-button {
   height: auto;
   width: 20%;
+}
+#bag {
+  max-height: 5%;
+  width: 10%;
 }
 .work-page {
   text-align: center;
@@ -13,17 +24,24 @@
   display: inline;
   float: middle;
   margin: auto;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .supporters {
   text-align: center;
   background-color: rgb(255, 155, 155);
   color: rgb(0, 0, 0);
   margin-top: 8vh;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 .list-group {
   text-align: center;
   background-color: rgb(255, 0, 0);
   color: rgb(0, 0, 0);
+}
+.supporter-text {
+  background-color: orange;
 }
 #title {
   text-align: left;
@@ -41,9 +59,8 @@
   text-align: center;
   margin-top: 5vh;
   margin-left: 27vw;
-}
-#twitch {
-  height: 7vh;
+  height: 100%;
+  width: 100%;
 }
 .ivans {
   display: inline-block;
@@ -54,21 +71,24 @@
   margin-right: auto;
   width: 100%;
 }
-.hat {
-  height: 30%;
-  width: 30%;
-  margin-left: 35vw;
+.merch-images {
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 30%;
 }
 .merchcard {
   display: flex;
   justify-content: center;
   position: relative;
-}
+  border-radius: 50%;
+ }
 .card {
   font-size: 5rem;
   margin-top: 7vh;
   background-color: rgb(255, 0, 0);
   color:sandybrown;
+  margin-left: 24%;
+  margin-right: 24%;
 }
 .add-to {
   margin-top: 7vh;
@@ -77,6 +97,9 @@
   display: flex;
   justify-content: center;
   position: relative;
+  color: rgba(0, 0, 0, 0.517);
+  font-weight: bolder;
+  size: 5vh;
 }
 .btn {
   text-align: center;
@@ -195,4 +218,11 @@ input[type=text]:focus {
 input[type=text]:placeholder {
   color: #cccccc;
 }
-
+#snap {
+  height: 10%;
+  width: 10%;
+}
+#twitter {
+  height: 5vh;
+  width: 10%;
+}

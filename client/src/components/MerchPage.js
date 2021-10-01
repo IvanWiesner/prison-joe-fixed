@@ -83,7 +83,7 @@ return (
           value={comment} 
           onChange={(e) => setComment(e.target.value)} 
         />
-       <button type="submit">Add Review</button>
+       <button type="submit" class="btn btn-outline-danger">Add Review</button>
       </form>
     </>
     

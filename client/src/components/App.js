@@ -101,7 +101,7 @@ function App() {
                 <div class='col-4'>
                   <p className='navbar-title'>Experience Prison</p>
                 </div>
-                <div class='col-1'>
+                <div class='col-1' id="snap">
                   <a
                     href='https://www.snapchat.com/add/sethepoo?share_id=RTc1RkJF&locale=en_US'
                     target='_blank'
@@ -110,7 +110,7 @@ function App() {
                   </a>
                   <br></br>
                 </div>
-                <div class='col-1'>
+                <div class='col-1' id="twitter">
                   <a href='https://twitter.com/joe_prison' target='_blank'>
                     <Image fluid src='https://i.imgur.com/LGpM9wt.png' />
                   </a>
