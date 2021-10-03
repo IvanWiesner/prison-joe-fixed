@@ -36,10 +36,10 @@ class UsersController < ApplicationController
             end
         end
         
-        def logout
-            session.delete(:user_id)
-            session[:user_id] = user.id
-        end
+        # def logout
+        #     session.delete(:user_id)
+        #     session[:user_id] = user.id
+        # end
         
         private 
         
