@@ -24,7 +24,7 @@ function App() {
       .then((resp) => resp.json())
       .then((data) => setMerches(data));
   }, []);
-  // if (localStorage.cartItems) {
+  // if (localStorage.cartItems) { notes
   //   setCartItems(JSON.parse(localStorage.cartItems))
   // }
   // fetch("/me")
