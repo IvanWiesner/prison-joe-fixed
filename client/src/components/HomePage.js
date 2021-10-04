@@ -6,7 +6,7 @@ function HomePage({ supporters, setSupporters}) {
       <div className="home-page">
         <div class="row">
           <div class="col-2">
-         <h2 className="home-header"> test text here The WIDEST Streamer on Twitch </h2>
+         <h2 className="home-header">The WIDEST Streamer on Twitch </h2>
     
           <Image src="https://i.imgur.com/b0p0vkv.png" fluid />
           </div>
