@@ -84,9 +84,9 @@ function App() {
             </div>
           </Navbar.Brand>
           <Nav className='me-auto' basename='/'>
-            <Nav.Link href='/'>Home</Nav.Link>
+            <Nav.Link href='/'>Merch</Nav.Link>
             <Nav.Link href='/work'>Work Info</Nav.Link>
-            <Nav.Link href='/merch'>Merch</Nav.Link>
+            <Nav.Link href='/merch'>About</Nav.Link>
             <Nav.Link href='/login'>Seth Go Here</Nav.Link>
             {login && <Nav.Link href='/newmerch'>Add New Merch</Nav.Link>}
           </Nav>
@@ -132,14 +132,7 @@ function App() {
         <Route
           path='/merch'
           component={() => (
-            <MerchPage
-              merches={merches}
-              setMerches={setMerches}
-              cartItems={cartItems}
-              setCartItems={setCartItems}
-              addToCart={addToCart}
-              login={login}
-            />
+            <HomePage supporters={supporters} setSupporters={setSupporters} />
           )}
         />
         <Route
@@ -173,7 +166,15 @@ function App() {
           exact
           path='/'
           component={() => (
-            <HomePage supporters={supporters} setSupporters={setSupporters} />
+            <MerchPage
+              merches={merches}
+              setMerches={setMerches}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              addToCart={addToCart}
+              login={login}
+            />
+            
           )}
         />
       </Switch>
