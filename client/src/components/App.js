@@ -13,7 +13,7 @@ import { Route, Link, Switch } from 'react-router-dom';
 
 function App() {
   const [login, setLogin] = useState(false);
-  // true = shows on navbar
+  // true = shows on navbar iodn 
   // const [superLogin, setSuperLogin] = useState(false)
   const [merches, setMerches] = useState([]);
   const [cartItems, setCartItems] = useState([]);
