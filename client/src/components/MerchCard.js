@@ -25,7 +25,7 @@ function MerchCard({merch, setMerches, handleNewReviews, addToCart, reviews,  se
           <div className="card">
           <p className="merch-name">{merch.name}</p>
             <Image src={merch.image_url} className="merch-images" fluid/>
-                <p className="merch-price">$26.99</p>
+                <p className="merch-price">{merch.price}</p>
                 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="paypal">
               <input type="hidden" name="cmd" value="_s-xclick"/>
               <input type="hidden" name="hosted_button_id" value="Z8BAUHWBBBJCY"/>
