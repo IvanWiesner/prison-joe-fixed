@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
-  # skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
     include ActionController::Cookies
-    before_action :authorize
+    # before_action :authorize
     
     def authorize
       @current_user = User.find_by(id:session[:user_id])
