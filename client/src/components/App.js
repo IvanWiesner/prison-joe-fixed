@@ -187,7 +187,7 @@ function App() {
           <p>For Business Inquirys-prisonjoe55@gmail.com</p>
           <div className='ivans'>
             <p>Website Creator - Ivan Wiesner</p>
-            <a href='www.linkedin.com/in/ivanwiesner' target='_blank'>
+            <a href='https://www.linkedin.com/in/ivanwiesner/' target='_blank'>
               <Col xs={2} md={1}>
                 <Image
                   className='linkdin'
