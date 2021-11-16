@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     wrap_parameters format: []
-    # before_action :authorize, only: :login
+    # before_action :authorize, only: :loginf 
     # skip_before_action :authorize, only: [:create] 
         def email 
             @email = "prisonjoe55@gmail.com"
