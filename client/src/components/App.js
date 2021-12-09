@@ -12,7 +12,7 @@ import { Navbar, Container, Nav, Image, Col } from 'react-bootstrap';
 import { Route, Link, Switch } from 'react-router-dom';
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
   // true = shows on navbar ion
   // const [superLogin, setSuperLogin] = useState(false)
   const [merches, setMerches] = useState([]);
